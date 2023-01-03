@@ -7,6 +7,7 @@ module.exports = {
     "plugin:vue/essential",
     "eslint:recommended",
     "plugin:prettier/recommended",
+    'prettier'
   ],
   parserOptions: {
     parser: "@babel/eslint-parser",
@@ -14,5 +15,7 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    //解决prettier和eslint冲突
+    'prettier/prettier':'off',
   },
 };
